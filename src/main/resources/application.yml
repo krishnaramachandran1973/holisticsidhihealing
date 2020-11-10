@@ -3,8 +3,10 @@ quarkus:
     db-kind: postgresql
     reactive:
       url: ${DATABASE_URL:postgresql://holistic:holistic@localhost:5432/holistic}
-  http:
-    port: ${PORT:8080}
   hibernate-orm:
     database:
       generation: drop-and-create
+  http:
+    port: ${PORT:8080}
+apiKey: rzp_test_i7JJhn455fsryw
+secretKey: Rqjsjeu5vpUsER2mpVzvCIP5

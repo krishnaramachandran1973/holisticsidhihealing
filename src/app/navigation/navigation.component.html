@@ -1,0 +1,52 @@
+<!--Main Navigation-->
+
+<header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark warning-color lighten-3 navbar-collapse">
+    <a class="navbar-brand mr-5">
+      <strong>
+        <img src="assets/images/logo.png">
+      </strong>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav">
+
+        <li class="nav-item" [routerLinkActive]="['active']">
+          <a class="nav-link header-link" [routerLink]="['about']"><i class="fas fa-certificate"></i>About</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']">
+          <a class="nav-link header-link" [routerLink]="['contact']"><i class="far fa-address-book"></i>Contact</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']">
+          <a class="nav-link header-link" [routerLink]="['consult']"><i class="fas fa-phone-volume"></i>Consultation</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']">
+          <a class="nav-link header-link" [routerLink]="['testimonial']"><i class="fas fa-bullhorn"></i>Testimonials</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']">
+          <a class="nav-link header-link" [routerLink]="['blogs']"><i class="fas fa-blog"></i>Blogs</a>
+        </li>
+      </ul>
+
+    </div>
+
+  </nav>
+
+</header>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb navbar-light warning-color lighten-5">
+    <li class="breadcrumb-item active">
+      <xng-breadcrumb separator=">"></xng-breadcrumb>
+    </li>
+  </ol>
+</nav>
+<!--Main Navigation-->
+
+

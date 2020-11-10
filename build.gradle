@@ -1,6 +1,7 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version "1.3.72"
     id "org.jetbrains.kotlin.plugin.allopen" version "1.3.72"
+    id 'com.github.node-gradle.node' version '2.2.4'
     id 'io.quarkus'
 }
 
@@ -11,20 +12,27 @@ repositories {
 
 dependencies {
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
+    implementation 'io.quarkus:quarkus-kotlin'
     implementation 'io.quarkus:quarkus-hibernate-reactive'
+    implementation 'io.quarkus:quarkus-hibernate-reactive-panache'
+    implementation 'io.quarkus:quarkus-reactive-pg-client'
     implementation 'io.quarkus:quarkus-vertx'
-    implementation 'io.quarkus:quarkus-hibernate-orm-panache-kotlin'
     implementation 'io.quarkus:quarkus-vertx-web'
     implementation 'io.quarkus:quarkus-config-yaml'
-    implementation 'io.quarkus:quarkus-kotlin'
-    implementation 'io.quarkus:quarkus-reactive-pg-client'
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
     implementation 'io.quarkus:quarkus-arc'
+    implementation 'com.razorpay:razorpay-java:1.3.8'
     testImplementation 'io.quarkus:quarkus-junit5'
 }
 
 group 'com.holistic'
 version '1.0'
+
+node {
+  version = "12.18.3"
+  npmVersion = "6.14.6"
+  download = true
+}
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
@@ -46,10 +54,32 @@ allOpen {
 }
 
 compileKotlin {
+  doFirst {
+    println 'Kotlin compile in progress'
+  }
     kotlinOptions.jvmTarget = JavaVersion.VERSION_1_8
     kotlinOptions.javaParameters = true
+    dependsOn('npm_run_build')
+}
+
+processResources {
+  doFirst {
+    println 'Moving Angular build to web resource started'
+  }
+  into("META-INF/resources") {
+    from("dist/holisticsidhihealing")
+  }
 }
 
 compileTestKotlin {
     kotlinOptions.jvmTarget = JavaVersion.VERSION_1_8
 }
+
+quarkusBuild {
+  doFirst {
+    println 'Quarkus build in progress'
+  }
+  uberJar = true
+}
+
+task stage(dependsOn: ['quarkusBuild'])

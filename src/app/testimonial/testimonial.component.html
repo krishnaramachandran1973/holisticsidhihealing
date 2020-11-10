@@ -1,0 +1,32 @@
+<div class="wave-container testimonial-bg wow animate__fadeInDown" data-wow-delay="0.6s" data-wow-duration="1.5s">
+   <h3 class="testimonial-header mt-5">Testimonials</h3>
+  <p class="testimonial-text">This is by those whose life got changed...</p>
+  <div class="container-fluid py-5 my-5 z-depth-1 wow animate__zoomIn" data-wow-delay="1s" data-wow-deration="2s">
+
+    <section class="p-md-5 mx-md-5 text-center text-lg-left">
+
+      <div class="row">
+
+        <div class="col-lg-4 px-3 mb-3 d-flex align-item-stretch" *ngFor="let file of fileNames">
+
+          <div class="card">
+
+            <div class="card-body m-1">
+
+              <audio controls controlsList="nodownload">
+                <source src="assets/audio/{{file.name}}">
+              </audio>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+</div>

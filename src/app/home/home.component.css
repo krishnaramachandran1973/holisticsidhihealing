@@ -1,0 +1,43 @@
+.home-bg {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-image: url("../../assets/images/home.svg");
+  background-repeat: no-repeat;
+  z-index: +1;
+}
+
+.home-offer-bg {
+  min-width: 100%;
+  min-height: 100%;
+  left: 0;
+  top: 0;
+  background-image: url("../../assets/images/home-offer.svg");
+  background-repeat: no-repeat;
+  z-index: +1;
+}
+
+.home-header {
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.offer-header {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.home-text {
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  line-height: 1.3;
+  text-align: left;
+}
