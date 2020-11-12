@@ -18,6 +18,8 @@ dependencies {
     implementation 'io.quarkus:quarkus-reactive-pg-client'
     implementation 'io.quarkus:quarkus-vertx'
     implementation 'io.quarkus:quarkus-vertx-web'
+    implementation 'io.quarkus:quarkus-mailer'
+    implementation 'io.quarkus:quarkus-qute'
     implementation 'io.quarkus:quarkus-config-yaml'
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
     implementation 'io.quarkus:quarkus-arc'

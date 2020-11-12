@@ -17,6 +17,7 @@ import {PaymentComponent} from './payment/payment.component';
 import {TestimonialComponent} from './testimonial/testimonial.component';
 import {MainComponent} from "./blog/main/main.component";
 import {BlogModule, routes as blogRoutes} from "./blog/blog.module";
+import { VerifyComponent } from './verify/verify.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, data: {breadcrumb: 'Home'}},
@@ -26,7 +27,8 @@ const routes: Routes = [
   {path: 'booking/:id', component: BookingComponent, data: {breadcrumb: 'Booking'}},
   {path: 'payment', component: PaymentComponent, data: {breadcrumb: 'Payment'}},
   {path: 'testimonial', component: TestimonialComponent, data: {breadcrumb: 'Testimonials'}},
-  {path: 'blogs', component: MainComponent, children: blogRoutes, data: {skip: true}}
+  {path: 'blogs', component: MainComponent, children: blogRoutes, data: {skip: true}},
+  {path: 'verify/:code', component: VerifyComponent, data: {breadcrumb: 'Verification'}}
 ]
 
 @NgModule({
@@ -40,7 +42,8 @@ const routes: Routes = [
     ConsultComponent,
     BookingComponent,
     PaymentComponent,
-    TestimonialComponent
+    TestimonialComponent,
+    VerifyComponent
   ],
   imports: [
     BrowserModule,

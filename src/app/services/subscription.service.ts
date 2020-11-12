@@ -19,10 +19,11 @@ export class SubscriptionService {
   }
 
 
-  getSubscription(url: string): Observable<Subscriber>
+  getSubscription(code: string): Observable<Subscriber>
   {
-    console.log('Sending to url' + url);
-    return this.http.get<Subscriber>(url)
+    console.log('Sending code to verify' + code);
+    return this.http.get<Subscriber>("api/subscribe/verify/"+code)
       .pipe(map(value => new Subscriber().deserialize(value)));
   }
+
 }

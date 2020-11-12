@@ -26,12 +26,12 @@ export class BookingComponent implements OnInit
 
   selectedProduct: Product;
 
-  options: Array<Product> = [new Product(1, '30', 'Phone Call', 2999),
-    new Product(2, '60', 'Phone Call', 4999),
-    new Product(3, '90', 'Phone Call', 7999),
-    new Product(4, '30', 'Video Call', 7999),
-    new Product(5, '60', 'Video Call', 10999),
-    new Product(6, '90', 'Video Call', 14999)];
+  options: Array<Product> = [new Product(1, '30 Mins', 'Phone Call', 2999),
+    new Product(2, '60 Mins', 'Phone Call', 4999),
+    new Product(3, '90 Mins', 'Phone Call', 7999),
+    new Product(4, '30 Mins', 'Video Call', 7999),
+    new Product(5, '60 Mins', 'Video Call', 10999),
+    new Product(6, '90 Mins', 'Video Call', 14999)];
 
   constructor(private activatedRoute: ActivatedRoute, fb: FormBuilder, private route: Router, private consultationService: ConsultationService)
   {

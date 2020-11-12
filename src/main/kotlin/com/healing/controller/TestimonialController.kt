@@ -25,7 +25,7 @@ class TestimonialController
   fun getAudios(): Uni<List<Audio>>
   {
     log.info("Fetching audios")
-    return return this.sessionFactory.withSession {
+    return this.sessionFactory.withSession {
       it.createQuery<Audio>("from Audio", Audio::class.java).resultList
     }
   }

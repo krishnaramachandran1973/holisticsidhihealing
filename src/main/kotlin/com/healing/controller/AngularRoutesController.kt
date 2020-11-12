@@ -25,4 +25,7 @@ class AngularRoutesController
 
   @Route(path = "/blogs", methods = [HttpMethod.GET], produces = ["text/html"])
   fun blogs(routingContext: RoutingContext) = routingContext.reroute("/")
+
+  @Route(regex = "/verify.*", methods = [HttpMethod.GET], produces = ["text/html"])
+  fun verify(routingContext: RoutingContext) = routingContext.reroute("/")
 }
