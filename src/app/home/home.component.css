@@ -3,27 +3,16 @@
   height: 100%;
   left: 0;
   top: 0;
-  background-image: url("../../assets/images/home.svg");
+  background-image: url("../../assets/images/home.svg"), url("../../assets/images/home-offer.svg");
   background-repeat: no-repeat;
+  background-color: #f1f2f3;
   z-index: +1;
 }
 
 .home-offer-bg {
-  min-width: 100%;
-  min-height: 100%;
-  left: 0;
-  top: 0;
   background-image: url("../../assets/images/home-offer.svg");
   background-repeat: no-repeat;
-  z-index: +1;
-}
-
-.home-header {
-  font-size: 35px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  line-height: 1.3;
-  text-align: center;
+  z-index: -1;
 }
 
 .offer-header {
@@ -32,12 +21,5 @@
   letter-spacing: 3px;
   line-height: 1.3;
   text-align: left;
-}
-
-.home-text {
-  font-size: 15px;
-  font-weight: 300;
-  letter-spacing: 2px;
-  line-height: 1.3;
-  text-align: left;
+  color: #304ffe;
 }

@@ -1,10 +1,11 @@
 <div class="wave-container blog-bg wow animate__fadeInDown" data-wow-delay="0.6s" data-wow-duration="1.5s">
 
-  <div class="container-fluid py-5 my-5 wow animate__zoomIn" data-wow-delay="1s" data-wow-deration="2s">
+  <div class="container-fluid wow animate__zoomIn" data-wow-delay="1s" data-wow-deration="2s">
 
-    <h3 class="blog-header mt-5">Blogs</h3>
-    <p class="blog-text">Some of my experiences...</p>
-    <section class="p-md-5 mx-md-5 text-center text-lg-left">
+    <h3 class="holistic-header my-2 text-center">Blogs</h3>
+    <p class="holistic-text text-center">Some of my experiences...</p>
+
+    <section>
 
       <div class="row">
 
@@ -13,9 +14,9 @@
           <div class="card hoverable z-depth-2">
 
             <div class="card-body m-1">
-              <p class="card-header blog-card-header">{{blog.blogMeta.title}}</p>
-              <p class="card-text blog-card-text">Date: {{blog.blogMeta.date}}</p>
-              <p class="card-text">Brief: {{blog.section1}}</p>
+              <p class="card-header brief-header">{{blog.blogMeta.title}}</p>
+              <p class="holistic-text">Date: {{blog.blogMeta.date}}</p>
+              <p class="holistic-text">Brief: {{blog.section1}}</p>
             </div>
             <button (click)="gotToDetails(blog.id)" type="button" class="btn btn-warning">Read on..</button>
           </div>

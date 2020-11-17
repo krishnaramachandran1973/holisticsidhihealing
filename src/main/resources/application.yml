@@ -17,8 +17,8 @@ quarkus:
     start-tls: REQUIRED
     auth-methods: DIGEST-MD5 CRAM-SHA256 CRAM-SHA1 CRAM-MD5 PLAIN LOGIN
     username: info@holisticsidhihealing.com
-    password: cqabh5h1@#
+    password: ${MAIL_PASSWORD}
     mock: false
 
-apiKey: rzp_test_i7JJhn455fsryw
-secretKey: Rqjsjeu5vpUsER2mpVzvCIP5
+apiKey: ${RAZOR_KEY}
+secretKey: ${RAZOR_SECRET}

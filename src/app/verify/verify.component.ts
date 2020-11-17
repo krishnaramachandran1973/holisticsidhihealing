@@ -8,6 +8,7 @@ import {Subscriber} from "../entity/Subscriber.model";
   templateUrl: './verify.component.html',
   styleUrls: ['./verify.component.css']
 })
+
 export class VerifyComponent implements OnInit
 {
   code: string;

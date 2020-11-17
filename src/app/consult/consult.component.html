@@ -1,79 +1,84 @@
-<div class="wave-container consult-bg wow animate__fadeInDown" data-wow-delay="0.6s" data-wow-duration="1s">
-  <div class="container pt-5 my-5 z-depth-5 wow animate__zoomIn" data-wow-delay="0.6s" data-wow-duration="1.5s">
-    <section class="p-md-3 mx-md-5">
+<div class="wave-container consult-bg">
 
-      <div class="row d-flex justify-content-between align-items-start">
-        <div class="col-md-6 mb-4">
-          <h2 class="font-weight-bold mb-3 container-fluid consult-header">BOOK YOUR PSYCHIC CONSULTATION WITH LINESH
-            DEV</h2>
-          <p class="text-muted pt-3 consult-text">
+  <div class="container-fluid wow animate__zoomIn" data-wow-delay="0.6s" data-wow-duration="1.5s">
+
+    <section class="z-depth-5 mt-3">
+
+      <div class="row">
+        <div class="col-md-8 mb-4">
+          <h2 class="font-weight-bold my-3 container-fluid holistic-header">YOUR PSYCHIC CONSULTATION</h2>
+          <p class="text-muted px-3 py-2 holistic-text darken-1 black-text">
             Book your Psychic Consult with me using the tickets below. I provide 3 pre-paid plans of 30, 60 and
-            90 minutes, for both phone-in and video sessions. Once I receive your order, we can communicate for a mutually preferred
+            90 minutes, for both phone-in and video sessions. Once I receive your order, we can communicate for a
+            mutually preferred
             time slot*.
           </p>
 
-          <h2 class="font-weight-bold mb-3 consult-header">WHY CHOOSE A CONSULTATION?</h2>
-          <p class="text-muted pt-3 consult-text">
+          <h2 class="font-weight-bold px-3 py-2 holistic-header">WHY CHOOSE A CONSULTATION?</h2>
+          <p class="text-muted px-3 py-3 holistic-text darken-1 black-text">
             A psychic consult helps you and me to find solutions to your questions then
             and there. As a clairvoyant, it provides me with messages that transcends past, present and future..
           </p>
+
+
+          <div class="row px-3 my-3">
+            <div class="col-lg-4 col-md-6 mb-1">
+              <h4 class="font-weight-bold mb-1">
+                <i class="far fa-paper-plane indigo-text pr-2"></i>
+                <button (click)="gotoBooking(1)" type="button" class="btn btn-primary">Phone - 30 MIN</button>
+              </h4>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-1">
+              <h4 class="font-weight-bold mb-1">
+                <i class="fas fa-pen-alt green-text pr-2"></i>
+                <button (click)="gotoBooking(2)" type="button" class="btn btn-success">Phone - 60 MIN</button>
+              </h4>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-1">
+              <h4 class="font-weight-bold mb-1">
+                <i class="fas fa-user amber-text pr-2"></i>
+                <button (click)="gotoBooking(3)" type="button" class="btn btn-warning">Phone - 90 MIN</button>
+              </h4>
+            </div>
+          </div>
+
+          <div class="row px-3">
+            <div class="col-lg-4 col-md-6 mb-2">
+              <h4 class="font-weight-bold mb-2">
+                <i class="far fa-paper-plane indigo-text pr-2"></i>
+                <button (click)="gotoBooking(4)" type="button" class="btn btn-primary"> Video - 30 MIN</button>
+              </h4>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-2">
+              <h4 class="font-weight-bold mb-2">
+                <i class="fas fa-pen-alt green-text pr-2"></i>
+                <button (click)="gotoBooking(5)" type="button" class="btn btn-success"> Video - 60 MIN</button>
+              </h4>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-2">
+              <h4 class="font-weight-bold mb-2">
+                <i class="fas fa-user amber-text pr-2"></i>
+                <button (click)="gotoBooking(6)" type="button" class="btn btn-warning"> Video - 90 MIN</button>
+              </h4>
+            </div>
+          </div>
         </div>
-        <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-md-0 mb-5">
-          <img src="assets/images/linesh-1.png" style="height: 500px">
+        <div class="col-md-4 col-lg-4 px-3 my-5">
+          <img src="assets/images/linesh-1.png">
         </div>
       </div>
 
-      <div class="row pt-3">
-        <div class="col-lg-4 col-md-6 mb-1">
-          <h4 class="font-weight-bold mb-1">
-            <i class="far fa-paper-plane indigo-text pr-2"></i>
-            <button (click)="gotoBooking(1)" type="button" class="btn btn-primary">Phone - 30 MIN</button>
-          </h4>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-1">
-          <h4 class="font-weight-bold mb-1">
-            <i class="fas fa-pen-alt green-text pr-2"></i>
-            <button (click)="gotoBooking(2)" type="button" class="btn btn-success">Phone - 60 MIN</button>
-          </h4>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-1">
-          <h4 class="font-weight-bold mb-1">
-            <i class="fas fa-user amber-text pr-2"></i>
-            <button (click)="gotoBooking(3)" type="button" class="btn btn-warning">Phone - 90 MIN</button>
-          </h4>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-lg-4 col-md-6 mb-2">
-          <h4 class="font-weight-bold mb-2">
-            <i class="far fa-paper-plane indigo-text pr-2"></i>
-            <button (click)="gotoBooking(4)" type="button" class="btn btn-primary"> Video - 30 MIN</button>
-          </h4>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-2">
-          <h4 class="font-weight-bold mb-2">
-            <i class="fas fa-pen-alt green-text pr-2"></i>
-            <button (click)="gotoBooking(5)" type="button" class="btn btn-success"> Video - 60 MIN</button>
-          </h4>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-2">
-          <h4 class="font-weight-bold mb-2">
-            <i class="fas fa-user amber-text pr-2"></i>
-            <button (click)="gotoBooking(6)" type="button" class="btn btn-warning"> Video - 90 MIN</button>
-          </h4>
-        </div>
-      </div>
     </section>
   </div>
 
   <div class="container my-5 z-depth-5 wow animate__zoomIn" data-wow-delay="0.6s" data-wow-duration="1.5s">
 
     <!--Section: Content-->
-    <section class="dark-grey-text">
+    <section>
 
       <!-- Section heading -->
-      <h3 class="text-center font-weight-bold mb-4 pb-2 consult-header">Help Center</h3>
+      <h3 class="text-center font-weight-bold mb-4 pb-2 holistic-header">Help Center</h3>
       <hr class="w-header">
       <!-- Section description -->
 
@@ -89,9 +94,9 @@
             <!-- Card content -->
             <div class="card-body z-depth-2">
 
-              <p><i class="fas fa-comments fa-3x text-primary"></i></p>
-              <h5 class="dark-grey-text my-4">Are you struggling in life?</h5>
-              <ul class="phone-text dark-grey-text">
+              <p><i class="fas fa-comments fa-3x red-text"></i></p>
+              <h4 class="holistic-text darken-1 black-text my-4">Are you struggling in life?</h4>
+              <ul class="holistic-text darken-1 black-text">
                 <li>Are things not going right in your life?</li>
                 <li>Are you or your dear ones suffering from physical ailments?</li>
                 <li>Are you or your dear ones suffering from mental disorders?</li>
@@ -115,9 +120,9 @@
             <!-- Card content -->
             <div class="card-body z-depth-2">
 
-              <p><i class="fas fa-cubes fa-3x text-warning"></i></p>
-              <h5 class="dark-grey-text my-4">How can this guy help? You would be thinking!</h5>
-              <ul class="phone-text dark-grey-text">
+              <p><i class="fas fa-cubes fa-3x red-text"></i></p>
+              <h5 class="holistic-text darken-1 black-text my-4">How can this guy help? You would be thinking!</h5>
+              <ul class="holistic-text darken-1 black-text">
                 <li>I can find the root cause of your problem!</li>
                 <li>I can ask things that I have come to know that you only knew!</li>
                 <li>I can give quick remedies that will alleviate your problem quickly.</li>

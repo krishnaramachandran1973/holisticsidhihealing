@@ -5,7 +5,7 @@
     <!--Section: Content-->
     <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
 
-      <h3 class="font-weight-bold payment-header">Payment Details</h3>
+      <h3 class="font-weight-bold holistic-header">Payment Details</h3>
 
       <!--Grid row-->
       <div class="row">
@@ -23,7 +23,7 @@
           <div [ngSwitch]="done">
             <div *ngSwitchCase="'complete'">
 
-              <div class="customer-text z-depth-2">
+              <div class="holistic-text z-depth-2">
                 <p>Customer Name: {{customer.firstName + " " + customer.lastName}}</p>
                 <p>Customer email: {{customer.email}}</p>
                 <p>Consultation Type: {{customer.product.type}} : {{customer.product.selected}} minutes</p>
@@ -34,7 +34,7 @@
             </div>
 
             <div *ngSwitchCase="'failed'">
-              <h3 class="failed-link">Payment Failed</h3>
+              <h3 class="holistic-header">Payment Failed</h3>
               <a [routerLinkActive]="['active']" [routerLink]="['/consult']" class="failed-link">Please try again!</a>
             </div>
 
