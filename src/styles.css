@@ -18,6 +18,7 @@ div#preloader {
 
 .xng-breadcrumb-item, label.xng-breadcrumb-trail, .xng-breadcrumb-link {
   margin-bottom: 0rem !important;
+  color: #304ffe;
 }
 
 .wave-container {
