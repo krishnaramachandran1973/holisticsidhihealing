@@ -22,10 +22,10 @@ class AppLifeCycleBean
   fun onStart(@Observes startupEvent: StartupEvent)
   {
     this.sessionFactory.withTransaction { session: Mutiny.Session, _: Mutiny.Transaction ->
-      session.persistAll(Audio("audio-1.mp3"),
+      session.persistAll(/*Audio("audio-1.mp3"),
         Audio("audio-2.mp3"),
         Audio("audio-3.mp3"),
-        Audio("audio-4.mp3"),
+        Audio("audio-4.mp3"),*/
         BlogData.blog1(),
         BlogData.blog2(),
         BlogData.blog3(),
