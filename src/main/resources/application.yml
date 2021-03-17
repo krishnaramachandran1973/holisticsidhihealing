@@ -2,7 +2,7 @@ quarkus:
   datasource:
     db-kind: postgresql
     reactive:
-      url: ${DATABASE_URL:postgresql://holistic:holistic@localhost:5432/holistic}
+      url: ${DATABASE_URL+"?sslmode=require":postgresql://holistic:holistic@localhost:5432/holistic}
   hibernate-orm:
     database:
       generation: drop-and-create
