@@ -4,7 +4,7 @@ quarkus:
     reactive:
       url: ${DATABASE_URL:postgresql://holistic:holistic@localhost:5432/holistic}
       postgresql:
-        ssl-mode: allow
+        ssl-mode: require
 
   hibernate-orm:
     database:
