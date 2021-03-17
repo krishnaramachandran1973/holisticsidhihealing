@@ -3,12 +3,12 @@ package com.healing.entity.blog
 import com.fasterxml.jackson.annotation.JsonFormat
 import com.fasterxml.jackson.databind.annotation.JsonSerialize
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer
-import io.quarkus.hibernate.reactive.panache.PanacheEntity
+//import io.quarkus.hibernate.reactive.panache.PanacheEntity
 import java.time.LocalDate
-import javax.persistence.Entity
+//import javax.persistence.Entity
 
-@Entity
-class BlogMeta() : PanacheEntity()
+//@Entity
+class BlogMeta()
 {
   lateinit var title: String
   @JsonSerialize(using = LocalDateSerializer::class)

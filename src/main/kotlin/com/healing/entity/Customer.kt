@@ -1,10 +1,10 @@
 package com.healing.entity
 
-import io.quarkus.hibernate.reactive.panache.PanacheEntity
-import javax.persistence.*
+/*import io.quarkus.hibernate.reactive.panache.PanacheEntity
+import javax.persistence.**/
 
-@Entity
-class Customer : PanacheEntity()
+//@Entity
+class Customer()
 {
   lateinit var firstName: String
   lateinit var lastName: String
@@ -14,14 +14,14 @@ class Customer : PanacheEntity()
   lateinit var countryCode: String
   lateinit var phone: String
 
-  @OneToOne(cascade = [CascadeType.PERSIST], fetch = FetchType.EAGER, targetEntity = Product::class)
+//  @OneToOne(cascade = [CascadeType.PERSIST], fetch = FetchType.EAGER, targetEntity = Product::class)
   lateinit var product: Product
   var paymentSuccess: Boolean = false
 
-  @Enumerated(EnumType.STRING)
+//  @Enumerated(EnumType.STRING)
   lateinit var paymentStatus: PaymentStatus
 
-  @OneToOne(cascade = [CascadeType.PERSIST], fetch = FetchType.EAGER, targetEntity = RazorOrder::class)
+//  @OneToOne(cascade = [CascadeType.PERSIST], fetch = FetchType.EAGER, targetEntity = RazorOrder::class)
   lateinit var razorOrder: RazorOrder
 
   override fun toString(): String

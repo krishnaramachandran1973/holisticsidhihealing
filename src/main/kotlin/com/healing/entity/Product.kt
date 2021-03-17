@@ -1,14 +1,14 @@
 package com.healing.entity
 
 
-import io.quarkus.hibernate.reactive.panache.PanacheEntity
+/*import io.quarkus.hibernate.reactive.panache.PanacheEntity
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
-import javax.persistence.Id
+import javax.persistence.Id*/
 
-@Entity
-class Product : PanacheEntity()
+//@Entity
+class Product()
 {
   lateinit var selected: String
   lateinit var type: String
@@ -16,7 +16,7 @@ class Product : PanacheEntity()
 
   override fun toString(): String
   {
-    return "Product(id=$id, selected='$selected', type='$type', price=$price)"
+    return "Product(id=, selected='$selected', type='$type', price=$price)"
   }
 
 

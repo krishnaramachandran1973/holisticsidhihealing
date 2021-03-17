@@ -1,13 +1,15 @@
 package com.healing.entity
 
-
-
-import io.quarkus.hibernate.reactive.panache.PanacheEntity
 import java.util.*
-import javax.persistence.Entity
 
-@Entity
-class Subscriber : PanacheEntity()
+
+/*
+import io.quarkus.hibernate.reactive.panache.PanacheEntity
+import javax.persistence.Entity
+*/
+
+//@Entity
+class Subscriber()
 {
   lateinit var name: String
   lateinit var email: String

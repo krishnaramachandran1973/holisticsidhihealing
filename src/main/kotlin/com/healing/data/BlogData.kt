@@ -11,7 +11,7 @@ class BlogData
     fun blog1(): Blog
     {
       val blogMeta1 = BlogMeta("A Case study", LocalDate.now())
-      return Blog(blogMeta1, "Patient’s family has been experiencing continuous problems – " +
+      return Blog(1,blogMeta1, "Patient’s family has been experiencing continuous problems – " +
         "unemployment, loss of income, trust deficits, frequent quarrels, suicide attempts by family members, etc. ",
         "Patient along with close family members met Linesh to obtain some succour. On meditation, Linesh " +
           "could clearly see the root of all problems. Patient was given Vibhuti and Haldi powder empowered with JAPA. ",
@@ -23,7 +23,7 @@ class BlogData
     fun blog2(): Blog
     {
       val blogMeta2 = BlogMeta("A Case Study", LocalDate.of(2019, 8, 3))
-      return Blog(blogMeta2, "Daughter’s marriage kept getting fixed but also " +
+      return Blog(2, blogMeta2, "Daughter’s marriage kept getting fixed but also " +
         "kept getting cancelled.", "Linesh gave Vibhuti and also instructed the patient to perform " +
         "specific poojas at specific temples.", "Within 3 months, the daughter got engaged and marriage " +
         "happened within 6 months.")
@@ -32,7 +32,7 @@ class BlogData
     fun blog3(): Blog
     {
       val blogMeta3 = BlogMeta("A Case Study", LocalDate.of(2019, 1, 18))
-      return Blog(blogMeta3, "Patient had been suffering with neck pain for over " +
+      return Blog(3, blogMeta3, "Patient had been suffering with neck pain for over " +
         "8 years. He was not able to raise his hands. ", "Had visited many doctors but to no avail. " +
         "He approached Linesh as a last measure. On meditation, Linesh could visualize the cause of the pain within " +
         "the body. He instilled positive energy into the affected areas. ", "Patient was also given Vibhuti " +
@@ -43,7 +43,7 @@ class BlogData
     fun blog4(): Blog
     {
       val blogMeta4 = BlogMeta("A Case Study", LocalDate.of(2020, 1, 26))
-      return Blog(blogMeta4, "Patient’s family having problems for more than " +
+      return Blog(4, blogMeta4, "Patient’s family having problems for more than " +
         "10 years – business losses, family problems, loss of peace, frequent quarrels. ", "Linesh on " +
         "meditation realized that the problem roots were in the forefather’s times. The poojas done during that time " +
         "were discontinued by this generation. ", "Patient was asked to resume the poojas. When the " +

@@ -8,15 +8,15 @@ import io.smallrye.mutiny.Uni
 import io.vertx.core.http.HttpMethod
 import io.vertx.reactivex.core.http.HttpServerRequest
 import io.vertx.reactivex.ext.web.RoutingContext
-import org.hibernate.reactive.mutiny.Mutiny.*
+//import org.hibernate.reactive.mutiny.Mutiny.*
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import java.net.URL
 import java.util.concurrent.CompletableFuture
 import javax.enterprise.context.ApplicationScoped
 import javax.inject.Inject
-import javax.persistence.criteria.CriteriaQuery
-import javax.persistence.criteria.Root
+/*import javax.persistence.criteria.CriteriaQuery
+import javax.persistence.criteria.Root*/
 
 @ApplicationScoped
 class SubscriberController
@@ -24,8 +24,8 @@ class SubscriberController
 
   val log: Logger = LoggerFactory.getLogger(SubscriberController::class.java)
 
-  @Inject
-  lateinit var sessionFactory: SessionFactory
+  /*@Inject
+  lateinit var sessionFactory: SessionFactory*/
 
   @Inject
   lateinit var subscription: MailTemplate
@@ -34,7 +34,8 @@ class SubscriberController
   fun saveSubscriber(@Body subscriber: Subscriber, httpServerRequest: HttpServerRequest): Uni<Boolean>
   {
     val url = URL(httpServerRequest.absoluteURI())
-    return this.sessionFactory.withTransaction { session: Session, _: Transaction ->
+    return Uni.createFrom().item(true)
+    /*return this.sessionFactory.withTransaction { session: Session, _: Transaction ->
       session.persist(subscriber)
     }
       .eventually {
@@ -55,7 +56,7 @@ class SubscriberController
         }
       }
       .onItem()
-      .transform { true }
+      .transform { true }*/
   }
 
   @Route(path = "api/subscribe/verify/:code", methods = [HttpMethod.GET])
@@ -64,8 +65,9 @@ class SubscriberController
     val code = routingContext.request()
       .getParam("code")
     log.info("Verifying code {}", code)
+    return Uni.createFrom().item(Subscriber())
 
-    val criteriaBuilder = sessionFactory.criteriaBuilder
+    /*val criteriaBuilder = sessionFactory.criteriaBuilder
     val criteriaQuery: CriteriaQuery<Subscriber> = criteriaBuilder.createQuery(Subscriber::class.java)
     val root: Root<Subscriber> = criteriaQuery.from(Subscriber::class.java)
 
@@ -79,6 +81,6 @@ class SubscriberController
           subscriber.verified = true
           session.flush()
         }
-    }
+    }*/
   }
 }

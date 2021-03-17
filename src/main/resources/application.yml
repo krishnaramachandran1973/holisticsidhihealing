@@ -1,14 +1,14 @@
 quarkus:
-  datasource:
-    db-kind: postgresql
-    reactive:
-      url: ${DATABASE_URL:postgresql://holistic:holistic@localhost:5432/holistic}
-      postgresql:
-        ssl-mode: require
-
-  hibernate-orm:
-    database:
-      generation: drop-and-create
+#  datasource:
+#    db-kind: postgresql
+#    reactive:
+#      url: ${DATABASE_URL:postgresql://holistic:holistic@localhost:5432/holistic}
+#      postgresql:
+#        ssl-mode: allow
+#
+#  hibernate-orm:
+#    database:
+#      generation: drop-and-create
   http:
     port: ${PORT:8080}
   mailer:

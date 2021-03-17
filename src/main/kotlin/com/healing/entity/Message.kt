@@ -1,19 +1,19 @@
 package com.healing.entity
 
 
-import io.quarkus.hibernate.reactive.panache.PanacheEntity
+/*import io.quarkus.hibernate.reactive.panache.PanacheEntity
 import javax.persistence.Column
-import javax.persistence.Entity
+import javax.persistence.Entity*/
 
-@Entity
-class Message : PanacheEntity()
+//@Entity
+class Message()
 {
   lateinit var name: String
   lateinit var email: String
   lateinit var phone: String
   lateinit var status: String
 
-  @Column(length = 600)
+  //@Column(length = 600)
   lateinit var message: String
   override fun toString(): String
   {
